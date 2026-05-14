@@ -3,16 +3,11 @@ package main
 import (
 	"log"
 
+	. "github.com/cimorexave/lib-back-service/internal/models"
 	"github.com/gin-gonic/gin"
 	"github.com/jmoiron/sqlx"
 	_ "github.com/lib/pq" // Postgres driver
 )
-
-type Book struct {
-	ID     int    `json:"id" db:"id"`
-	Title  string `json:"title" db:"title"`
-	Author string `json:"author" db:"author"`
-}
 
 func main() {
 	// Connect to Docker Database
